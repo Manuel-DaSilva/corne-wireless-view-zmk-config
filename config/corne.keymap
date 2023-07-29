@@ -38,6 +38,14 @@
                                 , <&macro_release &kp RGUI>
                                 ;
                 };
+                u_suck: u_suck {
+                        label = "ZM_u_suck";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_tap &kp u &kp SPACE &kp s &kp u &kp c &kp k>
+                                ;
+                };
         };
         behaviors {
                 hm: homerow_mods {
