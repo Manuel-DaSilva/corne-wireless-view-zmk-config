@@ -108,7 +108,7 @@
                 };
                 macros_layer {
                         bindings = <
-                &zed_em_kay         &none               &none          &none            &none       &none      &none         &none           &none        &none &none               &none
+                &zed_em_kay         &u_suck               &none          &none            &none       &none      &none         &none           &none        &none &none               &none
                 &none               &none               &none          &none            &none       &none      &none         &none           &none        &none &none               &none
                 &none               &none               &none          &none            &none       &none      &none         &none           &none        &none &none               &none
                                                                       &to DEFAULT       &none       &none      &none         &none           &to DEFAULT
