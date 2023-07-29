@@ -26,6 +26,13 @@
                         tapping-term-ms = <200>;
                         bindings = <&kp SEMI>, <&kp COLON>;
                 };
+                td1: tap_dance_1 {
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "TAP_DANCE_1";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&kp SQT>, <&kp DQT>;
+                };
         };
 
 
@@ -33,26 +40,26 @@
                 compatible = "zmk,keymap";
                 default_layer {
                         bindings = <
-                &kp TAB        &kp SQT  &kp COMMA &kp DOT    &kp P      &kp Y     &kp F   &kp G      &kp C      &kp R &kp L &kp BSPC
-                &hm LSHFT CAPS &kp A    &kp O     &hm LALT E &hm RGUI U &kp I     &kp D   &hm RGUI H &hm LALT T &kp N &kp S &kp FSLH
-                &kp LALT       &td0     &kp Q     &kp J      &kp K      &kp X     &kp B   &kp M      &kp W      &kp V &kp Z &kp ESC
+                &kp TAB        &td1  &kp COMMA &kp DOT    &kp P      &kp Y     &kp F   &kp G      &kp C      &kp R &kp L &kp BSPC
+                &kp LALT       &kp A &kp O     &hm LALT E &hm RGUI U &kp I     &kp D   &hm RGUI H &hm LALT T &kp N &kp S &kp FSLH
+                &hm LSHFT CAPS &td0  &kp Q     &kp J      &kp K      &kp X     &kp B   &kp M      &kp W      &kp V &kp Z &kp ESC
                                                 &kp LCTRL &mo 1 &kp SPACE &kp RET &mo 2 &kp RGUI 
                         >;
                 };
                 lower_layer {
                         bindings = <
                 &kp TAB        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5      &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp BSPC
-                &hm LSHFT CAPS &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp F11 &kp F12
-                &kp LALT       &kp F1       &kp F2       &kp F3       &kp F4       &kp F5      &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp ESC
+                &kp LALT       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp F11 &kp F12
+                &hm LSHFT CAPS &kp F1       &kp F2       &kp F3       &kp F4       &kp F5      &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp ESC
                                                 &kp LCTRL     &mo 0        &kp SPACE   &kp RET  &mo 0    &kp RGUI 
                         >;
                 };
                 raise_layer {
                         bindings = <
-                &kp TAB        &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-                &hm LSHFT CAPS &trans   &trans &trans   &kp LT   &kp GT    &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-                &kp LALT       &trans   &trans &trans   &trans   &trans    &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                                        &kp LCTRL &mo 0    &kp SPACE &kp RET   &mo 0     &kp RGUI 
+                &kp TAB          &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+                &kp LALT &trans  &trans &trans   &kp LT   &kp GT    &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+                &hm LSHFT CAPS   &trans   &trans &trans   &trans   &trans    &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                                              &kp LCTRL &mo 0    &kp SPACE &kp RET   &mo 0     &kp RGUI 
                         >;
                 };
         };
