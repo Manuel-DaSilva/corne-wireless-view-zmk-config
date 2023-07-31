@@ -38,16 +38,6 @@
                                 , <&macro_release &kp RGUI>
                                 ;
                 };
-                u_suck: u_suck {
-                        label = "ZM_u_suck";
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings
-                                = <&macro_press &kp LSHFT>
-                                , <&macro_tap &kp U &kp SPACE &kp S &kp U &kp C &kp K>
-                                , <&macro_release &kp LSHFT>
-                                ;
-                };
         };
         behaviors {
                 hm: homerow_mods {
@@ -80,16 +70,16 @@
                         bindings = <
                 &kp ESC   &td1  &kp COMMA   &kp DOT     &kp P      &kp Y        &kp F   &kp G      &kp C      &kp R       &kp L &kp BSPC
                 &kp TAB   &kp A &hm LCTRL O &hm LALT E  &hm LGUI U &kp I        &kp D   &hm RGUI H &hm RALT T &hm RCTRL N &kp S &kp FSLH
-                &kp LSHFT &td0  &kp Q       &kp J       &kp K      &kp X        &kp B   &kp M      &kp W      &kp V       &kp Z &none
+                &kp LSHFT &td0  &kp Q       &kp J       &kp K      &kp X        &kp B   &kp M      &kp W      &kp V       &kp Z &kp GAPS
                                             &to CONTROL &mo LOWER  &kp SPACE    &kp RET &mo RAISE  &sl MACROS
                         >;
                 };
                 lower_layer {
                         bindings = <
-                &kp ESC   &kp N1  &kp N2       &kp N3      &kp N4      &kp N5       &kp N6  &kp N7   &kp N8   &kp N9   &kp N0    &kp BSPC
-                &kp TAB   &kp F1  &hm LCTRL F2 &hm LALT F3 &hm LGUI F4 &kp F5       &kp F6  &kp LEFT &kp DOWN &kp UP   &kp RIGHT &none
-                &kp LSHFT &kp F7  &kp F8       &kp F9      &kp F10     &kp F11      &kp F12 &kp HOME &kp PGDN &kp PGUP &kp END   &none
-                                               &none       &trans      &kp SPACE    &kp RET &trans   &none
+                &kp ESC   &kp N1  &kp N2       &kp N3      &kp N4     &kp N5       &kp N6  &kp N7   &kp N8   &kp N9   &kp N0    &kp BSPC
+                &kp TAB   &none   &kp LCTRL    &kp LALT    &kp LGUI   &none        &none   &kp LEFT &kp UP   &kp DOWN &kp RIGHT &kp F12
+                &kp LSHFT &kp F1  &kp F2       &kp F3      &kp F4     &kp F5       &kp F6  &kp F7   &kp F8   &kp F9   &kp F10   &kp F11
+                                               &none       &trans     &kp SPACE    &kp RET &trans   &none
                         >;
                 };
                 raise_layer {
@@ -110,7 +100,7 @@
                 };
                 macros_layer {
                         bindings = <
-                &zed_em_kay         &u_suck             &none          &none            &none       &none      &none         &none           &none        &none &none               &none
+                &zed_em_kay         &none             &none          &none            &none       &none      &none         &none           &none        &none &none               &none
                 &none               &none               &none          &none            &none       &none      &none         &none           &none        &none &none               &none
                 &none               &none               &none          &none            &none       &none      &none         &none           &none        &none &none               &none
                                                                       &to DEFAULT       &none       &none      &none         &none           &to DEFAULT
