@@ -49,28 +49,14 @@
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
-                td0: tap_dance_0 {
-                        compatible = "zmk,behavior-tap-dance";
-                        label = "TAP_DANCE_0";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&kp SEMI>, <&kp COLON>;
-                };
-                td1: tap_dance_1 {
-                        compatible = "zmk,behavior-tap-dance";
-                        label = "TAP_DANCE_1";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&kp SQT>, <&kp DQT>;
-                };
         };
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
                         bindings = <
-                &kp ESC   &td1  &kp COMMA   &kp DOT     &kp P      &kp Y        &kp F   &kp G      &kp C      &kp R       &kp L &kp BSPC
-                &kp TAB   &kp A &hm LCTRL O &hm LALT E  &hm LGUI U &kp I        &kp D   &hm RGUI H &hm RALT T &hm RCTRL N &kp S &kp FSLH
-                &kp LSHFT &td0  &kp Q       &kp J       &kp K      &kp X        &kp B   &kp M      &kp W      &kp V       &kp Z &kp RSHIFT
+                &kp ESC   &kp SQT  &kp COMMA   &kp DOT     &kp P      &kp Y        &kp F   &kp G      &kp C      &kp R       &kp L &kp BSPC
+                &kp TAB   &kp A    &hm LCTRL O &hm LALT E  &hm LGUI U &kp I        &kp D   &hm RGUI H &hm RALT T &hm RCTRL N &kp S &kp FSLH
+                &kp LSHFT &kp SEMI &kp Q       &kp J       &kp K      &kp X        &kp B   &kp M      &kp W      &kp V       &kp Z &kp RSHIFT
                                             &to CONTROL &mo LOWER  &kp SPACE    &kp RET &mo RAISE  &sl MACROS
                         >;
                 };
